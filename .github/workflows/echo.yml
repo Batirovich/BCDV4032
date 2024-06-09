@@ -1,0 +1,11 @@
+name: Echo Name
+
+on: [push]
+
+jobs:
+  echo-name:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Echo my name
+        run: echo "Your Name"
