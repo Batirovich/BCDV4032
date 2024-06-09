@@ -8,4 +8,4 @@ jobs:
 
     steps:
       - name: Echo my name
-        run: echo "Your Name"
+        run: echo "Nodirbek"
