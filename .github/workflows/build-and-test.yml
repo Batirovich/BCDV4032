@@ -1,0 +1,31 @@
+name: Build and Test
+
+on: [push]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests
+        run: npm test
+
+      - name: Create dist directory
+        run: mkdir dist && echo "Build results" > dist/results.txt
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: build-results
+          path: dist/
