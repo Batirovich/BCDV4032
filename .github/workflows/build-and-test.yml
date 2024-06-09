@@ -17,18 +17,18 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-        working-directory: Lab\ 1
+        working-directory: Lab1
 
       - name: Run tests
         run: npm test
-        working-directory: Lab\ 1
+        working-directory: Lab1
 
       - name: Create dist directory
         run: mkdir dist && echo "Build results" > dist/results.txt
-        working-directory: Lab\ 1
+        working-directory: Lab1
 
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
           name: build-results
-          path: Lab\ 1/dist/
+          path: Lab1/dist/
