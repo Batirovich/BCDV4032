@@ -14,6 +14,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Change directory to Lab 1
+        run: cd "Lab 1"
+
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
@@ -21,6 +24,8 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+        working-directory: Lab 1
 
       - name: Run tests
         run: npm test
+        working-directory: Lab 1
