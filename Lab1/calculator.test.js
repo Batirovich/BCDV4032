@@ -14,6 +14,7 @@ test('multiplies 2 * 3 to equal 6', () => {
 });
 
 
+
 test('divides 6 / 2 to equal 3', () => {
     expect(divide(6, 2)).toBe(3);
 });
