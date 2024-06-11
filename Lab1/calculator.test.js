@@ -20,3 +20,16 @@ test('divides 6 / 2 to equal 3', () => {
 test('dividing by zero throws an error', () => {
     expect(() => divide(1, 0)).toThrow('Cannot divide by zero');
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
